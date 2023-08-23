@@ -1,5 +1,17 @@
 # README
 
+## What is being tested
+
+We have 3 proto files from scalapb project:
+- mlflow version which we get as generated code from mlflow package
+- v0.5.0 which is almost identical to mlflow one (package name is different)
+- v0.8.2 which is a lot newer with more options
+
+There are 3 packages that each uses one of the version in a function.
+All 3 functions are being called in main. 
+
+That tries to simulate different dependencies providing the same scalapb file.
+
 ## Preparation
 Create custom python evn with tooling of your liking.  
 `conda create -n repro_error python==3.9 -y`
